@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            left:0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: fixed;
+            background: linear-gradient(45deg, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+            background-size: 5000% 5000%;
+
+            -webkit-animation: rainbow 200s ease infinite;
+            -z-animation: rainbow 200s ease infinite;
+            -o-animation: rainbow 200s ease infinite;
+            animation: rainbow 200s ease infinite;}
+
+        @-webkit-keyframes rainbow {
+            0%{background-position:0% 100%}
+            50%{background-position:100% 0%}
+            100%{background-position:0% 100%}
+        }
+        @-moz-keyframes rainbow {
+            0%{background-position:0% 100%}
+            50%{background-position:100% 0%}
+            100%{background-position:0% 100%}
+        }
+        @-o-keyframes rainbow {
+            0%{background-position:0% 100%}
+            50%{background-position:100% 0%}
+            100%{background-position:0% 100%}
+        }
+        @keyframes rainbow {
+            0%{background-position:0% 100%}
+            50%{background-position:100% 0%}
+            100%{background-position:0% 100%}
+
+        }
+        button.buttonpink {
+            background-color: #F082AC;
+            border-radius: 1vw;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 4vw;
+            font-weight: 500;
+            width: auto;
+            height: auto;
+            line-height: 6vw;
+            list-style: none;
+            white-space: nowrap;
+            outline: none;
+            padding: 1vw;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: baseline;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .center {
+            position: absolute;
+            display: inline-block;
+            width: fit-content;
+            height: fit-content;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+        .head {
+            position: absolute;
+            display: inline-block;
+            white-space: nowrap;
+            width: 100vw;
+            padding: 2vw;
+            font-size: 7vw;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -90%);
+        }
+        .text {
+            position:absolute;
+            display: inline-block;
+            white-space: nowrap;
+            font-weight: bold;
+            font-size: 6vw;
+            text-shadow: 0vw 0vw 4vw #00000010;
+            width: 100vw;
+            padding: 2vw;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 25%);
+            background: -webkit-linear-gradient( 92deg, #95d7e3, #eb76ff );
+            background-size:600vw 600vw;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textAnimate 5s linear infinite alternate;
+        }
+
+        @keyframes textAnimate {
+            from {
+                filter: hue-rotate(0deg);
+                background-position-x: 0%;
+
+            }
+            to {
+                filter: hue-rotate(360deg);
+                background-position-x: 600vw;
+
+            }
+        }
+
+        .posbox {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, 15vw);
+        }
+        p {
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+
+    <div class="center">
+        <div class="head">
+            <i><p id="demo"><b>Hast du ne fette<br> &#10024; Identitätskrise? &#10024;</br></b></p></i>
+
+
+            <div class="text">
+                <p id="name"></p>
+            </div>
+        </div>
+        <div class="posbox">
+            <button class="buttonpink" role="button" onclick="myfunction()">wo therapie?</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+
+    function myfunction(){
+        const eins = ["rotwein", "aperol", "depressive", "linke", "freche", "antifa", "silly", "delusional", "müde", "horny"];
+        const zwei = ["meme","krisen", ""];
+        const drei = ["hoe","feministin" , "maus", "kommunistin"];
+        randome = Math.floor(Math.random() * eins.length);
+        randomz = Math.floor(Math.random() * zwei.length);
+        randomd = Math.floor(Math.random() * drei.length);
+
+        document.getElementById("demo").innerHTML = "Statt Therapie, wie wärs <br> mit einem neuen Instanamen: </br>";
+
+
+        document.getElementById("name").innerHTML =  eins[randome] + zwei[randomz] + drei[randomd];
+
+
+    }
+</script>
+
+</body
+</html>
+
